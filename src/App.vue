@@ -8,10 +8,10 @@
         {{RemainingWorkDay}}
       </h1>
       <h2>Gün Kaldı</h2>
-      <span>Bu gün hariç</span>
+      <span>Bugün hariç</span>
   
       <div>
-        bu gün: {{Today}}
+        bugün: {{Today}}
       </div>
   
     </main>
