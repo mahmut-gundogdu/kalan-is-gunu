@@ -9,6 +9,11 @@
       </h1>
       <h2>Gün Kaldı</h2>
       <span>Bu gün hariç</span>
+  
+      <div>
+        bu gün: {{Today}}
+      </div>
+  
     </main>
   </div>
 </template>
@@ -34,6 +39,9 @@ export default {
       console.log('Next month: ', nextMonth)
       console.log('Now: ', now)
       return now.businessDiff(nextMonth)
+    },
+    Today: function () {
+      return Moment(new Date()).format('L')
     }
   }
 }
