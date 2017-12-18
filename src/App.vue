@@ -34,10 +34,12 @@ export default {
       return Moment(new Date()).isBusinessDay()
     },
     RemainingWorkDay: function () {
-      let now = Moment(new Date())
-      let nextMonth = Moment([now.year(), now.month() + 1])
+      let nextMonth = Moment().add(1, 'months').date(1).subtract(1, 'days')
+      let now = Moment()
       console.log('Next month: ', nextMonth)
       console.log('Now: ', now)
+      console.log('Next month: ', nextMonth.format('MM/DD/YYYY'))
+      console.log('Now: ', now.format('MM/DD/YYYY'))
       return now.businessDiff(nextMonth)
     },
     Today: function () {
